@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rCa-86-0d9">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
@@ -55,6 +56,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="MainViewController" id="cPq-IM-Dd3">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="kNx-d9-SkR"/>
@@ -84,27 +86,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enh-L4-EAm" userLabel="Album Image">
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enh-L4-EAm" userLabel="Album Image">
                                 <rect key="frame" x="20" y="20" width="64" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="kIH-WW-bBZ"/>
+                                    <constraint firstAttribute="width" constant="64" id="tnm-AJ-ePV"/>
+                                </constraints>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="20" width="0.0" height="150"/>
                                 </variation>
                             </imageView>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unkown Album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZR-8K-iae" userLabel="Album Name">
-                                <rect key="frame" x="104" y="20" width="282" height="40"/>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unkown Album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZR-8K-iae" userLabel="Album Name">
+                                <rect key="frame" x="104" y="20" width="356" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="q5Q-ho-g5e"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unknwon Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-5i-vPv" userLabel="Artist Name">
-                                <rect key="frame" x="104" y="68" width="282" height="30"/>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknwon Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqc-5i-vPv" userLabel="Artist Name">
+                                <rect key="frame" x="104" y="68" width="356" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xDv-ad-T7D"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aZR-8K-iae" firstAttribute="leading" secondItem="enh-L4-EAm" secondAttribute="trailing" constant="20" id="64N-0e-YGX"/>
+                            <constraint firstAttribute="trailing" secondItem="rqc-5i-vPv" secondAttribute="trailing" constant="20" id="G7U-rk-200"/>
+                            <constraint firstItem="rqc-5i-vPv" firstAttribute="leading" secondItem="enh-L4-EAm" secondAttribute="trailing" constant="20" id="Gtz-qE-4vI"/>
+                            <constraint firstItem="enh-L4-EAm" firstAttribute="leading" secondItem="Zwv-ZL-iC8" secondAttribute="leading" constant="20" id="JrU-l9-1gW"/>
+                            <constraint firstItem="enh-L4-EAm" firstAttribute="top" secondItem="Zwv-ZL-iC8" secondAttribute="top" constant="20" id="aK5-2k-sXM"/>
+                            <constraint firstItem="aZR-8K-iae" firstAttribute="top" secondItem="Zwv-ZL-iC8" secondAttribute="top" constant="20" id="byc-VE-uNn"/>
+                            <constraint firstItem="rqc-5i-vPv" firstAttribute="top" secondItem="DcR-8W-ICB" secondAttribute="bottom" constant="4" id="eFk-4j-qBi"/>
+                            <constraint firstAttribute="trailing" secondItem="aZR-8K-iae" secondAttribute="trailing" constant="20" id="jEp-2E-hfw"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="DetailViewController" id="Qpe-ZY-yW1">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="OyW-ji-uAc"/>
@@ -171,6 +194,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="NewAlbumViewController" id="e3D-y0-MGg">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="XwT-rB-UAR">
