@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let kCellIdentifier = "iOSSwift_ViewController_kCellIdentifier"
     
     func initDataSource() {
-        dataSource.append(["pictureUrl":"http://4.bp.blogspot.com/-8NpUFElov7Y/UUm6wEg2LoI/AAAAAAAABho/Dk2qSofWZkk/s640/Dark-Side-sleeve.jpg", "albumName":"Dark Side of the Moon", "artistName":"Pink Floyd"])
+        self.dataSource.append(["pictureUrl":"http://4.bp.blogspot.com/-8NpUFElov7Y/UUm6wEg2LoI/AAAAAAAABho/Dk2qSofWZkk/s640/Dark-Side-sleeve.jpg", "albumName":"Dark Side of the Moon", "artistName":"Pink Floyd"])
     }
     
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell = UITableViewCell(style: .Subtitle, reuseIdentifier: kCellIdentifier)
         }
         
-        var album = dataSource[indexPath.row]
+        var album = self.dataSource[indexPath.row]
         
         if let currentCell:UITableViewCell = cell {
             currentCell.image = UIImage(data: NSData(contentsOfURL: NSURL(string: album["pictureUrl"])))
@@ -47,7 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return self.dataSource.count
     }
     
     func editedAlbumConfig(name: String, artistName: String, imageUrl: String, index:Int) -> Bool {
@@ -55,9 +55,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let dict = ["albumName":name,"artistName":artistName,"pictureUrl":imageUrl]
         
         if(index < 0) {
-            dataSource.append(dict)
+            self.dataSource.append(dict)
         } else {
-            dataSource[index] = dict
+            self.dataSource[index] = dict
         }
         
         self.tableView.reloadData()
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if(segue.identifier == "mainViewController_show_detailViewController") {
             if let cell = sender as? UITableViewCell {
                 let position = self.tableView.indexPathForCell(cell)
-                let album = dataSource[position.row]
+                let album = self.dataSource[position.row]
                 
                 if let detail = segue.destinationViewController as? DetailViewController {
                     detail.albumIndex = position.row

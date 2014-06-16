@@ -25,17 +25,17 @@ class NewAlbumViewController: UIViewController {
         super.viewDidLoad()
         self.edgesForExtendedLayout = .Bottom
         
-        if let initialInformation = detail {
-            albumName.text = initialInformation["albumName"]
-            artistName.text = initialInformation["artistName"]
-            imageUrl.text = initialInformation["pictureUrl"]
+        if let initialInformation = self.detail {
+            self.albumName.text = initialInformation["albumName"]
+            self.artistName.text = initialInformation["artistName"]
+            self.imageUrl.text = initialInformation["pictureUrl"]
         }
         
     }
     
     @IBAction func saveButtonAction(button: AnyObject!) {
-        if let controller = sender {
-            if controller.editedAlbumConfig(albumName.text, artistName: artistName.text, imageUrl: imageUrl.text, index: -1) {
+        if let controller = self.sender {
+            if controller.editedAlbumConfig(self.albumName.text, artistName: self.artistName.text, imageUrl: self.imageUrl.text, index: -1) {
                 self.navigationController.popViewControllerAnimated(true)
                 return
             }
