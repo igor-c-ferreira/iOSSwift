@@ -14,7 +14,7 @@ class DetailViewController: UIViewController, EditAlbumProtocol {
     @IBOutlet var albumName : UILabel
     @IBOutlet var artistName : UILabel
     
-    var album:Dictionary<String, String> = [:]
+    var album:Dictionary<String, String>?
     var albumIndex:Int = -1
     var sender:EditAlbumProtocol?
     
@@ -22,9 +22,12 @@ class DetailViewController: UIViewController, EditAlbumProtocol {
         super.viewDidLoad()
         self.edgesForExtendedLayout = .Bottom
         
-        albumImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: album["pictureUrl"])))
-        albumName.text = album["albumName"]
-        artistName.text = album["artistName"]
+        
+        if let currentAlbum = album {
+            albumImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: currentAlbum["pictureUrl"])))
+            albumName.text = currentAlbum["albumName"]
+            artistName.text = currentAlbum["artistName"]
+        }
         
     }
     
@@ -34,9 +37,7 @@ class DetailViewController: UIViewController, EditAlbumProtocol {
             
             let changed = controller.editedAlbumConfig(name, artistName: artistName, imageUrl: imageUrl, index: albumIndex)
             
-            album["albumName"] = name
-            album["artistName"] = artistName
-            album["pictureUrl"] = imageUrl
+            album = ["pictureUrl":imageUrl, "albumName":name, "artistName":artistName]
             
             albumImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: imageUrl)))
             albumName.text = name
