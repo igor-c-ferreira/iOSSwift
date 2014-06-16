@@ -159,42 +159,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Album Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nig-b9-phH">
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Album Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nig-b9-phH">
                                 <rect key="frame" x="20" y="20" width="105" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="ahN-Km-oaR"/>
+                                    <constraint firstAttribute="height" constant="21" id="hjN-aS-hf3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image Url:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAJ-21-nX3">
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Image Url:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAJ-21-nX3">
                                 <rect key="frame" x="20" y="96" width="105" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9kD-Vb-mtF"/>
+                                    <constraint firstAttribute="width" constant="105" id="hpg-TS-cxU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5WZ-0s-oh3">
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5WZ-0s-oh3">
                                 <rect key="frame" x="133" y="16" width="327" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CWY-JB-lNK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xG2-y1-NTU">
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xG2-y1-NTU">
                                 <rect key="frame" x="133" y="54" width="327" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ogN-NL-u46"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0h3-9M-5di">
+                            <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0h3-9M-5di">
                                 <rect key="frame" x="133" y="92" width="327" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QPq-zg-dyv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzJ-gQ-y5L">
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Artist Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzJ-gQ-y5L">
                                 <rect key="frame" x="20" y="58" width="105" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="nYP-tL-hCd"/>
+                                    <constraint firstAttribute="height" constant="21" id="q9O-Jd-S8w"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5WZ-0s-oh3" firstAttribute="leading" secondItem="nig-b9-phH" secondAttribute="trailing" constant="8" id="5cl-gk-Jsa"/>
+                            <constraint firstItem="xG2-y1-NTU" firstAttribute="top" secondItem="KzJ-gQ-y5L" secondAttribute="top" id="7xi-1a-tbt"/>
+                            <constraint firstItem="KzJ-gQ-y5L" firstAttribute="top" secondItem="nig-b9-phH" secondAttribute="bottom" constant="17" id="Cm2-id-DAP"/>
+                            <constraint firstItem="nig-b9-phH" firstAttribute="leading" secondItem="xc8-qu-FOd" secondAttribute="leading" constant="20" id="EJ1-Nm-IUo"/>
+                            <constraint firstItem="0h3-9M-5di" firstAttribute="top" secondItem="xG2-y1-NTU" secondAttribute="bottom" constant="8" id="EuE-tl-HvP"/>
+                            <constraint firstItem="XAJ-21-nX3" firstAttribute="leading" secondItem="xc8-qu-FOd" secondAttribute="leading" constant="20" id="H07-sv-ABq"/>
+                            <constraint firstItem="5WZ-0s-oh3" firstAttribute="top" secondItem="nig-b9-phH" secondAttribute="top" id="Kaq-KU-flV"/>
+                            <constraint firstItem="XAJ-21-nX3" firstAttribute="top" secondItem="KzJ-gQ-y5L" secondAttribute="bottom" constant="17" id="LET-gS-Orm"/>
+                            <constraint firstItem="xG2-y1-NTU" firstAttribute="leading" secondItem="KzJ-gQ-y5L" secondAttribute="trailing" constant="8" id="Mox-pH-5fM"/>
+                            <constraint firstAttribute="trailing" secondItem="0h3-9M-5di" secondAttribute="trailing" constant="20" id="NV2-Sp-0LA"/>
+                            <constraint firstItem="5WZ-0s-oh3" firstAttribute="leading" secondItem="nig-b9-phH" secondAttribute="trailing" constant="8" id="OdU-Oo-bGe"/>
+                            <constraint firstItem="0h3-9M-5di" firstAttribute="leading" secondItem="XAJ-21-nX3" secondAttribute="trailing" constant="8" id="QDg-Ok-Nt2"/>
+                            <constraint firstItem="XAJ-21-nX3" firstAttribute="top" secondItem="0h3-9M-5di" secondAttribute="top" id="X3q-i9-BYe"/>
+                            <constraint firstItem="0h3-9M-5di" firstAttribute="leading" secondItem="XAJ-21-nX3" secondAttribute="trailing" constant="8" id="c7f-Oj-ptz"/>
+                            <constraint firstItem="KzJ-gQ-y5L" firstAttribute="leading" secondItem="xc8-qu-FOd" secondAttribute="leading" constant="20" id="dwu-5G-32d"/>
+                            <constraint firstAttribute="trailing" secondItem="5WZ-0s-oh3" secondAttribute="trailing" constant="20" id="e4D-rp-m0a"/>
+                            <constraint firstItem="xG2-y1-NTU" firstAttribute="leading" secondItem="KzJ-gQ-y5L" secondAttribute="trailing" constant="8" id="gFY-sY-lDY"/>
+                            <constraint firstItem="xG2-y1-NTU" firstAttribute="top" secondItem="5WZ-0s-oh3" secondAttribute="bottom" constant="8" id="gpS-gi-q6l"/>
+                            <constraint firstAttribute="trailing" secondItem="xG2-y1-NTU" secondAttribute="trailing" constant="20" id="iSJ-Uq-WfQ"/>
+                            <constraint firstItem="nig-b9-phH" firstAttribute="top" secondItem="xc8-qu-FOd" secondAttribute="top" constant="20" id="pvu-ok-Iay"/>
+                            <constraint firstItem="5WZ-0s-oh3" firstAttribute="top" secondItem="xc8-qu-FOd" secondAttribute="top" constant="16" id="wkK-45-Tsf"/>
+                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pvu-ok-Iay"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="NewAlbumViewController" id="e3D-y0-MGg">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="XwT-rB-UAR">
