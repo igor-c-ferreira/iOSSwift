@@ -24,6 +24,13 @@
 			remoteGlobalIDString = AD34708819417B3E00DB3EA5;
 			remoteInfo = iOSSwift;
 		};
+		8AA0F1CE194FA0A1000D5831 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD34708119417B3E00DB3EA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD34708819417B3E00DB3EA5;
+			remoteInfo = iOSSwift;
+		};
 		AD34709C19417B4000DB3EA5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD34708119417B3E00DB3EA5 /* Project object */;
@@ -171,6 +178,7 @@
 			dependencies = (
 				AD34709D19417B4000DB3EA5 /* PBXTargetDependency */,
 				8AA0F1CD194FA0A1000D5831 /* PBXTargetDependency */,
+				8AA0F1CF194FA0A1000D5831 /* PBXTargetDependency */,
 			);
 			name = iOSSwiftTests;
 			productName = iOSSwiftTests;
@@ -260,6 +268,11 @@
 			isa = PBXTargetDependency;
 			target = AD34708819417B3E00DB3EA5 /* iOSSwift */;
 			targetProxy = 8AA0F1CC194FA0A1000D5831 /* PBXContainerItemProxy */;
+		};
+		8AA0F1CF194FA0A1000D5831 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD34708819417B3E00DB3EA5 /* iOSSwift */;
+			targetProxy = 8AA0F1CE194FA0A1000D5831 /* PBXContainerItemProxy */;
 		};
 		AD34709D19417B4000DB3EA5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
