@@ -8,7 +8,7 @@ A ideia é que este app seja uma simples lista de álbuns, com o nome do artista
 
 ## Plataformas
 
-Este projeto é universal para iOS 7.1 e 8.0
+Este projeto é universal para iOS 8.0
 
 ## Intenção
 

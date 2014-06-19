@@ -40,11 +40,14 @@ class NewAlbumViewController: UIViewController {
                 return
             }
         }
-        let alert = UIAlertView()
-        alert.title = "Error"
-        alert.message = "Error on saving the album. Please, retry"
-        alert.addButtonWithTitle("Ok")
-        alert.show()
+        
+        let alert = UIAlertController(title: "Error", message: "Error on saving the album", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Retry", style: .Default, handler: {action in
+            self.saveButtonAction(button)
+            return
+            }))
+        alert.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
 }
