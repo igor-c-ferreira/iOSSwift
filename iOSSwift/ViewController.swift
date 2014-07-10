@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EditAlbumProtocol {
     
     @IBOutlet var tableView : UITableView
-    var dataSource: Dictionary<String, String>[] = []
+    var dataSource: [Dictionary<String, String>] = []
     let kCellIdentifier = "iOSSwift_ViewController_kCellIdentifier"
     
     func initDataSource() {
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var album = self.dataSource[indexPath.row]
         
         if let currentCell:UITableViewCell = cell {
-            currentCell.image = UIImage(data: NSData(contentsOfURL: NSURL(string: album["pictureUrl"])))
+            currentCell.imageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: album["pictureUrl"])))
             currentCell.textLabel.text = album["albumName"]
             currentCell.detailTextLabel.text = album["artistName"]
         }
