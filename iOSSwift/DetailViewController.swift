@@ -10,9 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController, EditAlbumProtocol {
 
-    @IBOutlet var albumImage : UIImageView
-    @IBOutlet var albumName : UILabel
-    @IBOutlet var artistName : UILabel
+    @IBOutlet var albumImage : UIImageView?
+    @IBOutlet var albumName : UILabel?
+    @IBOutlet var artistName : UILabel?
     
     var album:Dictionary<String, String>?
     var albumIndex:Int = -1
@@ -24,9 +24,9 @@ class DetailViewController: UIViewController, EditAlbumProtocol {
         
         
         if let currentAlbum = self.album {
-            self.albumImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: currentAlbum["pictureUrl"])))
-            self.albumName.text = currentAlbum["albumName"]
-            self.artistName.text = currentAlbum["artistName"]
+            self.albumImage?.image = UIImage(data: NSData(contentsOfURL: NSURL(string: currentAlbum["pictureUrl"])))
+            self.albumName?.text = currentAlbum["albumName"]
+            self.artistName?.text = currentAlbum["artistName"]
         }
         
     }
@@ -39,9 +39,9 @@ class DetailViewController: UIViewController, EditAlbumProtocol {
             
             self.album = ["pictureUrl":imageUrl, "albumName":name, "artistName":artistName]
             
-            self.albumImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: imageUrl)))
-            self.albumName.text = name
-            self.artistName.text = artistName
+            self.albumImage?.image = UIImage(data: NSData(contentsOfURL: NSURL(string: imageUrl)))
+            self.albumName?.text = name
+            self.artistName?.text = artistName
             
             return changed
         } else {

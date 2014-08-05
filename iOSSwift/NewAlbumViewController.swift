@@ -14,9 +14,9 @@ protocol EditAlbumProtocol {
 
 class NewAlbumViewController: UIViewController {
     
-    @IBOutlet var albumName : UITextField
-    @IBOutlet var artistName : UITextField
-    @IBOutlet var imageUrl : UITextField
+    @IBOutlet var albumName : UITextField?
+    @IBOutlet var artistName : UITextField?
+    @IBOutlet var imageUrl : UITextField?
     
     var sender: EditAlbumProtocol?
     var detail: Dictionary<String, String>?
@@ -26,16 +26,16 @@ class NewAlbumViewController: UIViewController {
         self.edgesForExtendedLayout = .Bottom
         
         if let initialInformation = self.detail {
-            self.albumName.text = initialInformation["albumName"]
-            self.artistName.text = initialInformation["artistName"]
-            self.imageUrl.text = initialInformation["pictureUrl"]
+            self.albumName?.text = initialInformation["albumName"]
+            self.artistName?.text = initialInformation["artistName"]
+            self.imageUrl?.text = initialInformation["pictureUrl"]
         }
         
     }
     
     @IBAction func saveButtonAction(button: AnyObject!) {
         if let controller = self.sender {
-            if controller.editedAlbumConfig(self.albumName.text, artistName: self.artistName.text, imageUrl: self.imageUrl.text, index: -1) {
+            if controller.editedAlbumConfig(self.albumName!.text, artistName: self.artistName!.text, imageUrl: self.imageUrl!.text, index: -1) {
                 self.navigationController.popViewControllerAnimated(true)
                 return
             }

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, EditAlbumProtocol {
     
-    @IBOutlet var tableView : UITableView
+    @IBOutlet var tableView : UITableView?
     var dataSource: [Dictionary<String, String>] = []
     let kCellIdentifier = "iOSSwift_ViewController_kCellIdentifier"
     
@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.dataSource[index] = dict
         }
         
-        self.tableView.reloadData()
+        self.tableView?.reloadData()
         
         return true
     }
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if(segue.identifier == "mainViewController_show_detailViewController") {
             if let cell = sender as? UITableViewCell {
-                let position = self.tableView.indexPathForCell(cell)
+                let position = self.tableView!.indexPathForCell(cell)
                 let album = self.dataSource[position.row]
                 
                 if let detail = segue.destinationViewController as? DetailViewController {
